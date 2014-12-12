@@ -1,0 +1,35 @@
+{
+  "name": "rstamp-express-4x-nject-1",
+  "version": "0.0.1",
+  "description": "A rstamp generator that creates an express 4.x app that is built on nject.",
+  "main": "index.js",
+  "keywords": [
+    "express",
+    "express-train",
+    "nject",
+    "handlebars",
+    "rubber-stamp",
+    "rstamp"
+  ],
+  "license": "Eclipse Public License (EPL)",
+  "repository": "http://github/brucewayne/rstamp-express-4x-train-1.git",
+  "scripts": {
+    "test": "mocha --reporter list --compilers coffee:coffee-script/register tests"
+  },
+  "dependencies": {
+    "async": "^0.9.0",
+    "cli-color": "^0.3.2",
+    "coffee-script": "^1.8.0",
+    "inquirer": "^0.8.0",
+    "lodash": "^2.4.1",
+    "moment": "^2.8.3",
+    "nject": "^1.2.2",
+    "rubber-stamp": "0.0.6"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "mocha": "^1.21.4",
+    "sinon": "^1.10.3",
+    "sinon-chai": "^2.6.0"
+  }
+}
