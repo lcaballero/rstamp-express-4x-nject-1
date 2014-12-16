@@ -13,7 +13,10 @@ module.exports = (opts, isTesting) ->
       'app/middleware',
       'app/repos',
       'app/utilities')
+    .copy('app/repos/Mongo.coffee')
+    .copy('app/libs/ProcessHelpers.coffee')
     .copy('app/app.coffee')
+    .copy('app/deps.coffee')
     .copy('app/controllers/HomeController.coffee')
     .copy('app/middleware/routes.coffee')
     .copy('app/middleware/server.coffee')
@@ -45,6 +48,7 @@ module.exports = (opts, isTesting) ->
     # Basics
     .mkdirs('files')
     .copy('index.js')
+    .copy('start-mongo.coffee')
     .copy('license')
     .translate('package.json.ftl', 'package.json')
     .translate('readme.md.ftl', 'readme.md')
@@ -57,7 +61,9 @@ module.exports = (opts, isTesting) ->
         else [
             name : 'npm'
             args : [
-              "install", "body-parser", "compression", "connect-timeout", "cookie-parser", "cookie-session"
+              "install",
+              "async", "mongodb", "node-dev",
+              "body-parser", "compression", "connect-timeout", "cookie-parser", "cookie-session"
               "coffee-script", "error-handler", "express@4.x", "express-handlebars", "method-override"
               "morgan", "nject", "response-time", "serve-favicon", "serve-index", "serve-static"
               "session", "type-is", "vhost", "lodash", "--save"
